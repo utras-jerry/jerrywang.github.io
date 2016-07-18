@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/master.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/about.css">
+	<link rel="stylesheet" type="text/css" href="css/resume.css">
+	<link rel="stylesheet" type="text/css" href="css/projects.css">
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal Resume Website">
+    <meta name="author" content="Jerry Wang">
+    <title>Home</title>
+</head>
+<body>
+	<!-- Navigation -->
+	<div id="navigation">
+		<h1 id="unopenedNav">&#8801</h1>
+		<h1 id="openedNav">&#x2A09<h1>
+	</div>
+
+	<div id="navigationTab">
+		<ul>
+			<li>Home</li>
+			<li>Contents</li>
+			<ul>
+				<li>About</li>
+				<li>Resume</li>
+				<li>Projects</li>
+				<li>Contact</li>
+			</ul>
+		</ul>
+	</div>
+
+	<!-- Home Page -->
+	<div id="home">
+		<div>
+			<h1>Jerry Shih-Ming Wang</h1>
+			<h2>Software Developer, Biomedical Researcher, Hardware Engineer</h2>
+		</div>
+		<div id="learnMoreButton">
+			<p>Learn More</p>
+		</div>
+	</div>
+
+	<!-- Main Menu -->
+	<div id="content">
+		<div id="aboutBox">
+			<h1>About</h1>
+		</div>
+		<div id="resumeBox">
+			<h1>Resume</h1>
+		</div>
+		<div id="projectsBox">
+			<h1>Projects</h1>
+		</div>
+		<div id="contactBox">
+			<h1>Contact</h1>
+		</div>
+	</div>
+
+	<!-- Pages -->
+	<div id="about">
+
+	</div>
+	<div id="resume">
+
+	</div>
+	<div id="projects">
+
+	</div>
+	<div id="contact">
+
+	</div>
+</body>
+<footer>
+	<small>
+		<p id="breadcrumb"></p>
+		<p>Designed by: Jerry Wang</p>
+	</small>
+</footer>
+<script>
+	var breadcrumbValue = "Home";
+	var delay = 1000;
+	function hide(){
+		$("#home").hide();
+		$("#content").hide();
+		$("#navigationTab").hide();
+		$("#about").hide();
+		$("#resume").hide();
+		$("#projects").hide();
+		$("#contact").hide();
+	};
+
+	$(document).ready(function(){
+		hide();
+		$("#openedNav").hide();
+		$("#unopenedNav").show();
+		$("#home").show();
+		$("#breadcrumb").html(breadcrumbValue);
+	});
+
+	$("#navigation").click(function(){
+		$("#openedNav").fadeToggle();
+		$("#unopenedNav").fadeToggle();
+		$("#navigationTab").fadeToggle();
+	});
+	$("#learnMoreButton").click(function(){
+		breadcrumbValue += " > Table of Contents";
+		$("#home").fadeOut(delay, 'swing');
+		setTimeout('$("#content").fadeIn(500, "swing")', delay);
+		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
+	});
+	$("#aboutBox").click(function(){
+		breadcrumbValue += " > About";
+		$("#content").fadeOut(delay, 'swing');
+		setTimeout('$("#about").fadeIn(500, "swing")', delay);
+		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
+	});
+	$("#resumeBox").click(function(){
+		breadcrumbValue += " > Resume";
+		$("#content").fadeOut(delay, 'swing');
+		setTimeout('$("#resume").fadeIn(500, "swing")', delay);
+		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
+	});
+	$("#projectsBox").click(function(){
+		breadcrumbValue += " > Projects";
+		$("#content").fadeOut(delay, 'swing');
+		setTimeout('$("#projects").fadeIn(500, "swing")', delay);
+		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
+	});
+	$("#contactBox").click(function(){
+		breadcrumbValue += " > Contact";
+		$("#content").fadeOut(delay, 'swing');
+		setTimeout('$("#contact").fadeIn(500, "swing")', delay);
+		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
+	});
+</script>
+</html>
