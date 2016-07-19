@@ -60,6 +60,16 @@
 </style>
 
 <script>
+
+$("#navigation").click(function(){
+		if($("#navIcon").html() == "≡"){
+			$("#navIcon").html("&#x2A09");
+		}
+		else{
+			$("#navIcon").html("&#8801");
+		}
+		$("#navigationTab").fadeToggle();
+	});
 /*
 //	Navigation not funcitonal
 	$("#homeNav").click(function(){

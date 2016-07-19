@@ -14,7 +14,7 @@ body {
 	background-size: cover;
 */
 	font-family: Baskerville Old Face;;
-	height: 85%;
+	height: 80%;
 	width: 90%;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -25,7 +25,8 @@ h1 {
 }
 
 footer {
+	display: flex;
 	font-size: 17px;
-	height: 15%;
+	height: 20%;
 	width: 100%;
 }

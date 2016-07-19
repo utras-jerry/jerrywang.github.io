@@ -10,10 +10,12 @@
 	<link rel="stylesheet" type="text/css" href="css/contact.css">
 
 	<script type="text/javascript" src="js/jquery.js"></script>
+    
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Personal Resume Website">
     <meta name="author" content="Jerry Wang">
+
     <title>Home</title>
 </head>
 <body>
@@ -46,7 +48,11 @@
 
 	<!-- Pages -->
 	<div id="about">
-
+		<h1>About</h1>
+		<h2>Hello, I am Jerry Wang. &nbsp I am currently interning for Optum as a software developer in their big data team, specifically data fabric.</h2>
+		<h2>I will be a junior this fall at The University of Texas at Austin majoring in Electrical Engineering - with a focus in signal processing and integrated circuits.</h2>
+		<h2>I love to watch TV shows, though most of them have just finished their latest seasons. &nbsp Besides that, I love to build robots in my IEEE robotics club, explore Austin restaurants with my best friend, and walk around to catch some pok&#233mons.</h2>
+		<h2>You can find me in most of the buildings by north campus, but the best way to reach me is by emailing me at contact@jerrywang.info.</h2>
 	</div>
 	<div id="resume">
 
@@ -62,11 +68,15 @@
 	<small>
 		<p id="breadcrumb"></p>
 		<p>Designed by: Jerry Wang</p>
+		<p>Last modified on: <span id="timestampDate"></span></p>
 	</small>
 </footer>
 <script>
 	var breadcrumbValue;
-	var delay = 1000;
+	var delay = 700;
+	var date = document.lastModified;
+	$("#timestampDate").html(date);
+
 	function hide(){
 		$("#home").hide();
 		$("#content").hide();
@@ -82,46 +92,17 @@
 		breadcrumbValue = "Home";
 		$("#breadcrumb").html(breadcrumbValue);
 	});
-	$("#navigation").click(function(){
-		if($("#navIcon").html() == "≡"){
-			$("#navIcon").html("&#x2A09");
-		}
-		else{
-			$("#navIcon").html("&#8801");
-		}
-		$("#navigationTab").fadeToggle();
-	});
 
-	$("#learnMoreButton").click(function(){
+	$("#learnMoreButton").one('click', function(){
 		breadcrumbValue += " > Table of Contents";
 		$("#home").fadeOut(delay, 'swing');
 		setTimeout('$("#content").fadeIn(500, "swing")', delay);
 		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
 	});
-	$("#aboutBox").click(function(){
-		breadcrumbValue += " > About";
-		$("#content").fadeOut(delay, 'swing');
-		setTimeout('$("#about").fadeIn(500, "swing")', delay);
-		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
-	});
-	$("#resumeBox").click(function(){
-		breadcrumbValue += " > Resume";
-		$("#content").fadeOut(delay, 'swing');
-		setTimeout('$("#resume").fadeIn(500, "swing")', delay);
-		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
-	});
-	$("#projectsBox").click(function(){
-		breadcrumbValue += " > Projects";
-		$("#content").fadeOut(delay, 'swing');
-		setTimeout('$("#projects").fadeIn(500, "swing")', delay);
-		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
-	});
-	$("#contactBox").click(function(){
-		breadcrumbValue += " > Contact";
-		$("#content").fadeOut(delay, 'swing');
-		setTimeout('$("#contact").fadeIn(500, "swing")', delay);
-		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
-	});
-
 </script>
+<script type="text/javascript" src="js/content.js"></script>
+<script type="text/javascript" src="js/about.js"></script>
+<script type="text/javascript" src="js/resume.js"></script>
+<script type="text/javascript" src="js/projects.js"></script>
+<script type="text/javascript" src="js/contact.js"></script>
 </html>
