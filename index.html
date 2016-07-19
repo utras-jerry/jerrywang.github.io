@@ -98,7 +98,11 @@
 	var delay = 200;
 	var date = document.lastModified;
 	$("#timestampDate").html(date);
-	
+	$(function(){
+		$("#helpTooltip").tooltip();
+		$("#projectsAccordion").accordion();
+  	});
+ 
 	function hide(){
 		$("#home").hide();
 		$("#content").hide();
