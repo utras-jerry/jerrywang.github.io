@@ -72,8 +72,10 @@
 	</small>
 </footer>
 <script>
+	var pages = ["home", "content", "about", "resume", "projects", "contact"]
+	var location = 0;
 	var breadcrumbValue;
-	var delay = 700;
+	var delay = 200;
 	var date = document.lastModified;
 	$("#timestampDate").html(date);
 
@@ -89,15 +91,65 @@
 	$(document).ready(function(){
 		hide();
 		$("#home").show();
-		breadcrumbValue = "Home";
+		breadcrumbValue = "<span id='homeBC'>Home</span>";
 		$("#breadcrumb").html(breadcrumbValue);
 	});
+	$(document).keyup(function(e){
+		if(e.which == 37){
 
-	$("#learnMoreButton").one('click', function(){
-		breadcrumbValue += " > Table of Contents";
+		}
+		else if(e.which == 39){
+
+		}
+	});
+	$("#learnMoreButton").click(function(){
+		location = 1;
+		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span>";
 		$("#home").fadeOut(delay, 'swing');
 		setTimeout('$("#content").fadeIn(500, "swing")', delay);
 		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
+	});
+	$(document).on("click", "#homeBC", function(){
+		hide();
+		location = 0;
+		$("#home").show();
+		breadcrumbValue = "<span id='homeBC'>Home</span>";
+		$("#breadcrumb").html(breadcrumbValue);
+	});
+	$(document).on("click", "#contentBC", function(){
+		hide();
+		location = 1;
+		$("#content").show();
+		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span>";
+		$("#breadcrumb").html(breadcrumbValue);
+	});
+	$(document).on("click", "#aboutBC", function(){
+		hide();
+		location = 2;
+		$("#about").show();
+		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span> > <span id='aboutBC'>About</span>";
+		$("#breadcrumb").html(breadcrumbValue);
+	});
+	$(document).on("click", "#resumeBC", function(){
+		hide();
+		location = 3;
+		$("#resume").show();
+		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span> > <span id='resumeBC'>Resume</span>";
+		$("#breadcrumb").html(breadcrumbValue);
+	});
+	$(document).on("click", "#projectsBC", function(){
+		hide();
+		location = 4;
+		$("#projects").show();
+		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span> > <span id='projectsBC'>Projects</span>";
+		$("#breadcrumb").html(breadcrumbValue);
+	});
+	$(document).on("click", "#contactBC", function(){
+		hide();
+		locaiton = 5;
+		$("#contact").show();
+		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span> > <span id='contactBC'>Contact</span>";
+		$("#breadcrumb").html(breadcrumbValue);
 	});
 </script>
 <script type="text/javascript" src="js/content.js"></script>
