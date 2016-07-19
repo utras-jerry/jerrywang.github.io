@@ -1,0 +1,44 @@
+#content {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	justify-content: space-around;
+	text-align: center;
+	align-items: center;
+}
+
+#aboutBox {
+	margin-left: 5%;
+	border: solid;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+#resumeBox {
+	border: solid;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+#projectsBox {
+	border: solid;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+#contactBox {
+	border: solid;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 60px;
+	padding-right: 60px;
+	margin-right: 5%;
+}
