@@ -1,0 +1,30 @@
+#home{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+#home * {
+	text-align: center;
+	margin: auto;
+}
+
+#home div h1 {
+	font-size: 60px;
+}
+
+#learnMoreButton {
+	width: 12%;
+	margin: auto;
+	text-align: center;
+	border-style: solid;
+	border-width: 2px;
+}
+
+#learnMoreButton p {
+	font-weight: bold;
+	font-size: 20px;
+}

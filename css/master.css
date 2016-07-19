@@ -1,0 +1,54 @@
+html {
+	height: 100%;
+	width: 100%;
+/*
+	navigation icon: &#8801
+*/
+}
+body {
+/*
+	background things
+	background: no-repeat 50% 50% fixed;
+	background-image: url('../images/duck.jpeg');
+	background-size: cover;
+*/
+	font-family: Baskerville Old Face;;
+	height: 100%;
+	width: 100%;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+footer {
+	font-size: 17px;
+	height: 10%;
+	width: 100%;
+}
+
+#navigation {
+	height: 45px;
+	border-style: none;
+	color: white;
+	background-color: grey;
+	text-align: center;
+	margin-left: 94.8%;
+	margin-right: 2%;
+}
+
+#navigationTab {
+	border-style: none;
+	color: white;
+	position: fixed;
+	background-color: grey;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 70px;
+	margin-left: 81.7%;
+	margin-right: 0%;	
+}
