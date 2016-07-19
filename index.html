@@ -17,25 +17,6 @@
     <title>Home</title>
 </head>
 <body>
-	<!-- Navigation -->
-	<div id="navigation">
-		<h1 id="unopenedNav">&#8801</h1>
-		<h1 id="openedNav">&#x2A09<h1>
-	</div>
-
-	<div id="navigationTab">
-		<ul>
-			<li>Home</li>
-			<li>Contents</li>
-			<ul>
-				<li>About</li>
-				<li>Resume</li>
-				<li>Projects</li>
-				<li>Contact</li>
-			</ul>
-		</ul>
-	</div>
-
 	<!-- Home Page -->
 	<div id="home">
 		<div>
@@ -84,7 +65,7 @@
 	</small>
 </footer>
 <script>
-	var breadcrumbValue = "Home";
+	var breadcrumbValue;
 	var delay = 1000;
 	function hide(){
 		$("#home").hide();
@@ -97,16 +78,20 @@
 	};
 	$(document).ready(function(){
 		hide();
-		$("#openedNav").hide();
-		$("#unopenedNav").show();
 		$("#home").show();
+		breadcrumbValue = "Home";
 		$("#breadcrumb").html(breadcrumbValue);
 	});
 	$("#navigation").click(function(){
-		$("#openedNav").fadeToggle();
-		$("#unopenedNav").fadeToggle();
+		if($("#navIcon").html() == "≡"){
+			$("#navIcon").html("&#x2A09");
+		}
+		else{
+			$("#navIcon").html("&#8801");
+		}
 		$("#navigationTab").fadeToggle();
 	});
+
 	$("#learnMoreButton").click(function(){
 		breadcrumbValue += " > Table of Contents";
 		$("#home").fadeOut(delay, 'swing');
@@ -137,5 +122,6 @@
 		setTimeout('$("#contact").fadeIn(500, "swing")', delay);
 		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
 	});
+
 </script>
 </html>
