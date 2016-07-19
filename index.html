@@ -8,14 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="css/resume.css">
 	<link rel="stylesheet" type="text/css" href="css/projects.css">
 	<link rel="stylesheet" type="text/css" href="css/contact.css">
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min..css">
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.css">
-	<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.min.css">
-
+	
 	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,8 +58,6 @@
 		<h2>You can find me in most of the buildings by north campus, but the best way to reach me is by emailing me at contact@jerrywang.info.</h2>
 	</div>
 	<div id="resume">
-		<object data="resume/resume.pdf" type="application/pdf" height="100%" width="100%">
-		</object>
 	</div>
 	<div id="projects">
 		<h1>Projects</h1>
@@ -98,9 +90,7 @@
 	var delay = 200;
 	var date = document.lastModified;
 	$("#timestampDate").html(date);
-	$("#helpTooltip").tooltip();
-	$("#projectsAccordion").accordion();
- 
+	
 	function hide(){
 		$("#home").hide();
 		$("#content").hide();
