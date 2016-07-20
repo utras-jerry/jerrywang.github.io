@@ -1,37 +1,97 @@
-html {
+html * {
 	font-family: Baskerville Old Face;
+	margin: 2.5%;
+	padding: 0px;
 /*
 	navigation icon: &#8801
 */
 }
+
 body {
+	height: 100%;
 /*
 	background things
 	background: no-repeat 50% 50% fixed;
 	background-image: url('../images/duck.jpeg');
 	background-size: cover;
 */
-	margin-left: 5%;
-	margin-right: 5%;
 }
 
 h1 {
 	font-size: 40px;
 }
 
-footer {
-	font-size: 17px;
-	height: 20%;
-	width: 100%;
-}
-
-#help *{
-	font-size: 30px;
+#help * {
+	font-size: 35px;
 	font-weight: bold;
-	margin-left: 92%;
-	margin-top: 1%;
 }
 
-#help *:hover{
+#help *:hover {
 	color: brown;
+}
+
+#pages {
+	height: 340px;
+}
+
+#home * {
+	display: flex;
+	flex-direction: column;
+}
+
+#home div div h1 {
+	font-size: 50px;
+}
+
+#home div div h3 {
+	font-size: 30px;
+}
+
+#homeHR {
+	align-self: center;
+	width: 80%; 
+	border-color: lightgrey;
+}
+
+#learnMoreButton {
+	display: flex;
+	vertical-align: middle;
+	border-style: solid;
+	margin-left:41%;
+	width: 15%;
+	vertical-align: middle;
+}
+
+#learnMoreButton * {
+	margin-top: 11%;
+	height: 100%;
+	align-self: center;
+}
+
+#learnMoreButton p {
+	font-size: 22px;
+}
+
+#content {
+	vertical-align: middle;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+}
+
+#content * {
+	text-align: center;
+}
+
+#footer *{
+	margin: 0px;
+	padding: 0px;
+	font-size: 17px;
+	height: 10%;
+}
+
+#footerBC * {
+	margin: 0px;
+	padding: 0px;
 }
