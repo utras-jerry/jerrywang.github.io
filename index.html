@@ -21,185 +21,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Personal Resume Website">
     <meta name="author" content="Jerry Wang">
+<style>
 
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body * {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+</style>
     <title>Home</title>
 </head>
 <body>
-	<div id="help">
-		<h1 id="helpTooltip" title="Navigate back using left arrow key or by clicking on the breadcrumbs">&#63</h1>
-	</div>
-	<!-- Home Page -->
-	<div id="home">
-		<div>
-			<h1>Jerry Shih-Ming Wang</h1>
-			<h2>Software Developer, Biomedical Researcher, Hardware Engineer</h2>
-		</div>
-		<div id="learnMoreButton">
-			<p>Learn More</p>
-		</div>
-	</div>
+	<h1> site under maintenance, be back soon :)</h1>
+	<img src="images/duck.jpeg" style="margin-left: 20%;width: 60%; height:70%;">
+	<h2> to get in touch with me, email me at: contact@jerrywang.info</h2>
 
-	<!-- Main Menu -->
-	<div id="content">
-		<div id="aboutBox">
-			<h1>About</h1>
-		</div>
-		<div id="resumeBox">
-			<h1>Resume</h1>
-		</div>
-		<div id="projectsBox">
-			<h1>Projects</h1>
-		</div>
-		<div id="contactBox">
-			<h1>Contact</h1>
-		</div>
-	</div>
 
-	<!-- Pages -->
-	<div id="about">
-		<h1>About</h1>
-		<h2>Hello, I am Jerry Wang. &nbsp I am currently interning for Optum as a software developer in their big data team, specifically data fabric.</h2>
-		<h2>I will be a junior this fall at The University of Texas at Austin majoring in Electrical Engineering - with a focus in signal processing and integrated circuits.</h2>
-		<h2>I love to watch TV shows, though most of them have just finished their latest seasons. &nbsp Besides that, I love to build robots in my IEEE robotics club, explore Austin restaurants with my best friend, and walk around to catch some pok&#233mons.</h2>
-		<h2>You can find me in most of the buildings by north campus, but the best way to reach me is by emailing me at contact@jerrywang.info.</h2>
-	</div>
-	<div id="resume">
-		<object data="resume/resume.pdf" type="application/pdf" height="100%" width="100%">
-		</object>
-	</div>
-	<div id="projects">
-		<h1>Projects</h1>
-		<div id="projectsAccordion">
-			<h2>Robotics</h2>
-			<div>
-				<p>hi</p>
-			</div>
-			<h2>Research</h2>
-			<div>
-				<p>hi</p>
-			</div>
-			<h2>Lab Projects</h2>
-			<div>
-				<p>hi</p>
-			</div>
-			<h2>Robotics</h2>
-			<div>
-				<p>hi</p>
-			</div>
-			<h2>Research</h2>
-			<div>
-				<p>hi</p>
-			</div>
-			<h2>Lab Projects</h2>
-			<div>
-				<p>hi</p>
-			</div>
-		</div>
-	</div>
-	<div id="contact">
-
-	</div>
 </body>
-<footer>
-	<small>
-		<p id="breadcrumb"></p>
-		<p>Designed by: Jerry Wang</p>
-		<p>Last modified on: <span id="timestampDate"></span></p>
-	</small>
-</footer>
-<script>
-	var pages = ["home", "content", "about", "resume", "projects", "contact"]
-	var pageIndex;
-	var breadcrumbValue;
-	var delay = 200;
-	var date = document.lastModified;
-	$("#timestampDate").html(date);
-	$(function(){
-		$("#helpTooltip").tooltip();
-		$("#projectsAccordion").accordion();
-  	});
- 
-	function hide(){
-		$("#home").hide();
-		$("#content").hide();
-		$("#navigationTab").hide();
-		$("#about").hide();
-		$("#resume").hide();
-		$("#projects").hide();
-		$("#contact").hide();
-	};
-	$(document).ready(function(){
-		hide();
-		$("#home").show();
-		pageIndex = 0;
-		breadcrumbValue = "<span id='homeBC'>Home</span>";
-		$("#breadcrumb").html(breadcrumbValue);
-	});
-
-	$(document).keyup(function(e){
-		if((e.which == 37) && (pageIndex > 0)){
-			if(pageIndex >= 2){
-				pageIndex = 1;
-			}
-			else{
-				pageIndex--;
-			}
-			$("#" + pages[pageIndex] + "BC").trigger("click")
-		}
-	});
-	$("#learnMoreButton").click(function(){
-		pageIndex = 1;
-		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span>";
-		$("#home").fadeOut(delay, 'swing');
-		setTimeout('$("#content").fadeIn(500, "swing")', delay);
-		setTimeout('$("#breadcrumb").html(breadcrumbValue)', delay);
-	});
-	$(document).on("click", "#homeBC", function(){
-		hide();
-		pageIndex = 0;
-		$("#home").show();
-		breadcrumbValue = "<span id='homeBC'>Home</span>";
-		$("#breadcrumb").html(breadcrumbValue);
-	});
-	$(document).on("click", "#contentBC", function(){
-		hide();
-		pageIndex = 1;
-		$("#content").show();
-		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span>";
-		$("#breadcrumb").html(breadcrumbValue);
-	});
-	$(document).on("click", "#aboutBC", function(){
-		hide();
-		pageIndex = 2;
-		$("#about").show();
-		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span> > <span id='aboutBC'>About</span>";
-		$("#breadcrumb").html(breadcrumbValue);
-	});
-	$(document).on("click", "#resumeBC", function(){
-		hide();
-		pageIndex = 3;
-		$("#resume").show();
-		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span> > <span id='resumeBC'>Resume</span>";
-		$("#breadcrumb").html(breadcrumbValue);
-	});
-	$(document).on("click", "#projectsBC", function(){
-		hide();
-		pageIndex = 4;
-		$("#projects").show();
-		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span> > <span id='projectsBC'>Projects</span>";
-		$("#breadcrumb").html(breadcrumbValue);
-	});
-	$(document).on("click", "#contactBC", function(){
-		hide();
-		pageIndex = 5;
-		$("#contact").show();
-		breadcrumbValue = "<span id='homeBC'>Home</span> > <span id='contentBC'>Table of Contents</span> > <span id='contactBC'>Contact</span>";
-		$("#breadcrumb").html(breadcrumbValue);
-	});
-</script>
-<script type="text/javascript" src="js/content.js"></script>
-<script type="text/javascript" src="js/about.js"></script>
-<script type="text/javascript" src="js/resume.js"></script>
-<script type="text/javascript" src="js/projects.js"></script>
-<script type="text/javascript" src="js/contact.js"></script>
 </html>
