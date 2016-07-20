@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal Resume Website">
+    <meta name="author" content="Jerry Wang">
+
+    <title>Beta</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div id="help">
+			<div class="col-xs-11"></div>
+			<div class="col-xs-1 text-center" data-toggle="tooltip" data-placement="left" title="Navigate back by pressing the left arrow key or by pressing on the breadcrumbs">
+				<h1>&#63</h1>
+			</div>
+		</div>
+		<div id="pages">
+			<div id="home">
+				<div class="text-center top-half">
+					<h1>Jerry Shih-Ming Wang</h1>
+					<hr>
+					<h3>Software Developer, Biomedical Researcher, Hardware Engineer</h3>
+				</div>
+				<div class="text-center bottom-half">
+					<div id="learnMoreButton">
+						<p>Learn More</p>
+					</div>
+				</div>
+			</div>	
+			<div id="content">
+				<p>hi</p>
+			</div>	
+			<div id="about">
+				<p>hi</p>
+			</div>	
+			<div id="resume">
+				<p>hi</p>
+			</div>	
+			<div id="projects">
+				<p>hi</p>
+			</div>	
+			<div id="contact">
+				<p>hi</p>
+			</div>	
+		</div>
+		<div id="footer">
+			<small>
+				<p id="breadcrumb"></p>
+				<p>Designed by: Jerry Wang</p>
+				<p>Last modified on: <span id="timestampDate"></span></p>
+			</small>
+		</div>	
+	</div>
+
+</body>
+<script>
+//
+//	variables start
+//
+	var breadcrumbPages = ["home", "content", "about", "resume", "projects", "contact"]
+	var breadcrumbIndex;
+	var breadcrumbText = [	"<span id=''>Home</span>",
+							"<span id=''>Home</span> > <span id=''>Content</span>",
+							"<span id=''>Home</span> > <span id=''>Content</span> > <span id=''>About</span>",
+							"<span id=''>Home</span> > <span id=''>Content</span> > <span id=''>Resume</span>",
+							"<span id=''>Home</span> > <span id=''>Content</span> > <span id=''>Projects</span>",
+							"<span id=''>Home</span> > <span id=''>Content</span> > <span id=''>Contact</span>"
+						 ];
+	var date = document.lastModified;
+
+//
+// variables end
+//
+
+//
+//	jQuery start
+//
+	$(document).ready(function(){
+		hide();
+		breadcrumbIndex = 0;
+		$("#home").show();
+		$("#timestampDate").html(date);
+		$("#breadcrumb").html(breadcrumbText[breadcrumbIndex]);
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+//
+//	jQuery end
+//
+
+//
+//	function start
+//
+	function hide(){										//	hide all screens
+		$("#home").hide();
+		$("#content").hide();
+		$("#about").hide();
+		$("#resume").hide();
+		$("#projects").hide();
+		$("#contact").hide();
+	};
+//
+//	function end
+//
+</script>
+</html>
