@@ -11,19 +11,6 @@ $(function(){
         event.preventDefault();
 
         // TODO
-        $.ajax({
-            type: 'POST',
-            url: 'email.php',
-            data: formData,
-            success: function() {
-                $('#contactForm :input').attr('disabled', 'disabled');
-                $('#error').hide();
-                $('#success').fadeIn();
-            },
-            error: function() {
-                $('#success').hide();
-                $('#error').fadeIn();
-            }
-        });
+        $.post("email.php");
     });
 });
