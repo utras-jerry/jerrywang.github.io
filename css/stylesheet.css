@@ -1,10 +1,14 @@
+object {
+	color: yellow;
+}
+
 html, body {
 	height: 100%;
 	width: 100%;
 }
 
 body {
-	padding: 5%;
+	padding: 2%;
 	background: no-repeat 50% 50% fixed;
 /*	background-image: url('../images/duck.jpeg');
 	background-size: cover;*/
@@ -21,7 +25,7 @@ body * {
 }
 
 .top-half {
-	height: 50%;
+	height: 70%;
 	padding-top: 5%;
 	padding-bottom: 5%;
 	padding-left: 5%;
@@ -29,7 +33,7 @@ body * {
 }
 
 .bottom-half {
-	height: 50%;
+	height: 30%;
 	padding-top: 5%;
 	padding-bottom: 5%;
 	padding-left: 5%;
@@ -37,46 +41,31 @@ body * {
 }
 
 #help {
-	height: 15%;
+	height: 10%;
 	width: 100%;
 }
 
 #footer {
-	height: 15%;
+	padding-top: 2.5%;
+	height: 12.5%;
 	width: 100%;
 }
 
 #pages {
 	height: 70%;
 	width: 100%;
+	background-color: #E8FFE8;
 }
 
 #home {
 	height: 100%;
 	width: 100%;
 }
+
 #home div hr {
 	border-color: lightgrey;
 	text-align: center;
 	width: 70%;
-}
-
-#learnMoreButton {
-	height: 55%;
-	width: 10%;
-	align-self: center;
-	border-style: solid;
-	border-size: 1px;
-	border-color: grey;
-	margin-left: 45%;
-	margin-right: 45%;
-}
-
-#learnMoreButton p {
-	text-align: center;
-	padding: 5%;
-	height: 100%;
-	width: 100%;
 }
 
 #content {
@@ -102,4 +91,28 @@ body * {
 #contact {
 	height: 100%;
 	width: 100%;
+}
+
+#aboutBox {
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgrey;
+}
+
+#resumeBox {
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgrey;
+}
+
+#projectsBox {
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgrey;
+}
+
+#contactBox {
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightgrey;
 }
