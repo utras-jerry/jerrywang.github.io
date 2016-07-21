@@ -17,9 +17,11 @@ $(function(){
             data: formData,
             success: function() {
                 $('#contactForm :input').attr('disabled', 'disabled');
+                $('#error').hide();
                 $('#success').fadeIn();
             },
             error: function() {
+                $('#success').hide();
                 $('#error').fadeIn();
             }
         });
