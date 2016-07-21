@@ -73,6 +73,21 @@ body * {
 	width: 100%;
 }
 
+#topRow {
+	height: 40%;	
+	width: 100%;
+}
+
+#middleRow {
+	height: 20%;	
+	width: 100%;
+}
+
+#bottomRow {
+	height: 40%;	
+	width: 100%;
+}
+
 #about {
 	height: 100%;
 	width: 100%;
@@ -94,25 +109,47 @@ body * {
 }
 
 #aboutBox {
+	height: 100%;
 	border-style: solid;
 	border-width: 1px;
 	border-color: lightgrey;
 }
 
 #resumeBox {
+	height: 100%;
 	border-style: solid;
 	border-width: 1px;
 	border-color: lightgrey;
 }
 
 #projectsBox {
+	height: 100%;
 	border-style: solid;
 	border-width: 1px;
 	border-color: lightgrey;
 }
 
 #contactBox {
+	height: 100%;
 	border-style: solid;
 	border-width: 1px;
 	border-color: lightgrey;
+}
+
+#header {
+	height: 20%;
+	width: 100%;
+	padding: 1%;
+}
+
+#body {
+	height: 80%;
+	width: 100%;
+	padding: 1%;
+}
+
+h3 a {
+	font-size: 24px;
+	color: black;
+	text-decoration: underline;
 }

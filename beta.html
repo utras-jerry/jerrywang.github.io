@@ -42,38 +42,80 @@
 				</div>
 			</div>	
 			<div id="content">
-				<div class="row text-center">
-					<div class="col-xs-3" id="aboutBox">
-						<h1>About</h1>
-					</div>
-					<div class="col-xs-3" id="resumeBox">
-						<h1>Resume</h1>
-					</div>
-					<div class="col-xs-3" id="projectsBox">
-						<h1>Projects</h1>
-					</div>
-					<div class="col-xs-3" id="contactBox">
-						<h1>Contact</h1>
+				<div id="topRow"></div>
+				<div id="middleRow">
+					<div class="row text-center">
+						<div class="col-xs-3" id="aboutBox">
+							<h1>About</h1>
+						</div>
+						<div class="col-xs-3" id="resumeBox">
+							<h1>Resume</h1>
+						</div>
+						<div class="col-xs-3" id="projectsBox">
+							<h1>Projects</h1>
+						</div>
+						<div class="col-xs-3" id="contactBox">
+							<h1>Contact</h1>
+						</div>
 					</div>
 				</div>
+				<div id="bottomRow"></div>
 			</div>	
 			<div id="about">
-				<div>
+				<div id="header">
 					<h1>About</h1>
-					<h2>Hello, I am Jerry Wang. &nbsp I am currently interning for Optum as a software developer in their big data team, specifically data fabric.</h2>
-					<h2>I will be a junior this fall at The University of Texas at Austin majoring in Electrical Engineering - with a focus in signal processing and integrated circuits.</h2>
-					<h2>I love to watch TV shows, though most of them have just finished their latest seasons. &nbsp Besides that, I love to build robots in my IEEE robotics club, explore Austin restaurants with my best friend, and walk around to catch some pok&#233mons.</h2>
-					<h2>You can find me in most of the buildings by north campus, but the best way to reach me is by emailing me at contact@jerrywang.info.</h2>
+				</div>
+				<div id="body">
+					<h3>Hello, I am Jerry Wang. &nbsp I am currently interning for Optum as a software developer in their big data team, specifically data fabric.</h3>
+					<h3>I will be a junior this fall at The University of Texas at Austin majoring in Electrical Engineering - with a focus in signal processing and integrated circuits.</h3>
+					<h3>I love to watch TV shows, though most of them have just finished their latest seasons. &nbsp Besides that, I love to build robots in my IEEE robotics club, explore Austin restaurants with my best friend, and walk around to catch some pok&#233mons.</h3>
+					<h3>You can find me in most of the buildings by north campus, but the best way to reach me is by emailing me at <a id="email">contact@jerrywang.info</a>.</h3>
 				</div>
 			</div>	
 			<div id="resume">
 				<object data="resume/resume.pdf" width="100%" height="100%" name="resume" title="resume"></object>
 			</div>	
 			<div id="projects">
-				<p>hi</p>
+				<div id="header">
+					<h1>Projects</h1>
+				</div>
+				<div id="body">
+					<div class="panel-group" id="accordion">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+					    		<h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+					        		Robotics
+					    		</h4>
+					    	</div>
+					    	<div id="collapse1" class="panel-collapse collapse in">
+					    		<div class="panel-body">Hi</div>
+					    	</div>
+					  	</div>
+						<div class="panel panel-default">
+					    	<div class="panel-heading">
+					     		<h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+					        		Research
+					      		</h4>
+					    	</div>
+					    	<div id="collapse2" class="panel-collapse collapse">
+					    		<div class="panel-body">Hi</div>
+					    	</div>
+					  	</div>
+					  	<div class="panel panel-default">
+					    	<div class="panel-heading">
+					    		<h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+					        		Labs
+					      		</h4>
+					    	</div>
+					    	<div id="collapse3" class="panel-collapse collapse">
+					    		<div class="panel-body">Hi</div>
+					    	</div>
+					  	</div>
+					</div> 
+				</div>
 			</div>	
 			<div id="contact">
-				<p>hi</p>
+				
 			</div>	
 		</div>
 		<div id="footer">
@@ -86,6 +128,18 @@
 							<p>Last modified on: <span id="timestampDate"></span></p>
 						</blockquote>						
 					</small>
+				</div>
+				<div class="col-xs-6">
+					<div id="header">
+						<h5>Website Progress:</h5>
+					</div>
+					<div id="body">
+						<div class="progress">
+  							<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width:10%">
+    							10%
+  							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>	
@@ -172,6 +226,13 @@
 		$("#content").fadeOut(delay, 'swing');
 		setTimeout('$("#contact").fadeIn(500, "swing")', delay);
 		setTimeout('$("#breadcrumb").html(breadcrumbText[breadcrumbIndex])', delay);
+	});
+	$("#email").click(function(){
+		breadcrumbIndex = 5;
+		$("#about").fadeOut(delay, 'swing');
+		setTimeout('$("#contact").fadeIn(500, "swing")', delay);
+		setTimeout('$("#breadcrumb").html(breadcrumbText[breadcrumbIndex])', delay);
+		
 	});
 //
 //	jQuery end
