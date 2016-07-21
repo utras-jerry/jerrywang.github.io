@@ -11,6 +11,19 @@ $(function(){
         event.preventDefault();
 
         // TODO
-        $.post("email.php");
+        $.ajax({
+            type: 'POST',
+            url: 'email.php',
+            data: formData,
+            success: function() {
+                $('#contactForm :input').attr('disabled', 'disabled');
+                $('#error').hide();
+                $('#success').fadeIn();
+            },
+            error: function() {
+                $('#success').hide();
+                $('#error').fadeIn();
+            }
+        });
     });
 });
