@@ -1,15 +1,9 @@
 <?php
-
     $to = "contact@jerrywang.info"; 
     $from = $_REQUEST['email']; 
     $name = $_REQUEST['name']; 
+    $message = $_REQUEST['message'];
     $headers = "From: $from"; 
-    $subject = "Form submitted by $name"; 
-    $fields = array(); 
-    $fields{"name"} = "name"; 
-    $fields{"email"} = "email"; 
-    $fields{"message"} = "message";
-    $body = "Here is what was sent:\n\n"; foreach($fields as $a => $b){   $body .= sprintf("%20s: %s\n",$b,$_REQUEST[$a]); }
-    $send = mail($to, $subject, $body, $headers);
-
+    $subject = "Form submitted from $name"; 
+    $send = mail($to, $subject, $message, $headers);
 ?>
