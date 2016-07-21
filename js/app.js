@@ -13,7 +13,7 @@ $(function(){
         // TODO
         $.ajax({
             type: 'POST',
-            url: $(form).attr('action'),
+            url: 'php/email.php',
             data: formData,
             success: function() {
                 $('#contactForm :input').attr('disabled', 'disabled');
