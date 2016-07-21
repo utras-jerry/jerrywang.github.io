@@ -5142,9 +5142,8 @@ a.thumbnail.active {
   font-size: 12px;
   line-height: 20px;
   color: white;
-  font-weight: bold;
   text-align: center;
-  background-color: black;
+  background-color: grey;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
           box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
   -webkit-transition: width .6s ease;
