@@ -139,7 +139,7 @@
                             </div>
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
-                                <button id="submit" onclick="save()" type="submit" class="btn btn-default">Submit</button>
+                                <button type="submit" class="btn btn-default">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -167,23 +167,6 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-        function save(){
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var phone = document.getElementById("phone").value;
-            var contact = document.getElementById("message").value;
-            var dataString = 'name=' + name + '&email1=' + email + '&phone=' + password + '&contact=' + contact;
-            $.ajax({ 
-                url: "form-handler-nodb.php",
-                type: "POST",
-                data: dataString,
-                cache: false,
-                success: function(html) {
-                      alert(html);
-                }
-            });
-        };
-
         $(document).ready(function(){
 /*          $("#submit").on("click", function(){
                 
