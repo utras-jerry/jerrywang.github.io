@@ -174,7 +174,7 @@
             var contact = document.getElementById("message").value;
             var dataString = 'name=' + name + '&email1=' + email + '&phone=' + password + '&contact=' + contact;
             $.ajax({ 
-                url: "http://www.jerrywang.info/contact.html",
+                url: "form-handler-nodb.php",
                 type: "POST",
                 data: dataString,
                 cache: false,
