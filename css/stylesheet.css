@@ -1,155 +1,196 @@
-object {
-	color: yellow;
-}
-
-html, body {
-	height: 100%;
-	width: 100%;
-}
+/*!
+ * Start Bootstrap - Business Casual (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
 
 body {
-	padding: 2%;
-	background: no-repeat 50% 50% fixed;
-/*	background-image: url('../images/duck.jpeg');
-	background-size: cover;*/
+    font-family: Baskerville, Baskerville Old Face, Hoefler Text,Garamond,Times New Roman, serif;
+    background: url('../img/homeBackground.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
 
-body * {
-	font-size: 15px;
-	font-family: Baskerville Old Face;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: Baskerville, Baskerville Old Face, Hoefler Text,Garamond,Times New Roman, serif;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.container-fluid {
-	height: 100%;
-	width: 100%;
+p {
+    font-size: 1.25em;
+    line-height: 1.6;
+    color: #000;
 }
 
-.top-half {
-	height: 70%;
-	padding-top: 5%;
-	padding-bottom: 5%;
-	padding-left: 5%;
-	padding-right: 5%;
+hr {
+    max-width: 400px;
+    border-color: #999999;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.bottom-half {
-	height: 30%;
-	padding-top: 5%;
-	padding-bottom: 5%;
-	padding-left: 5%;
-	padding-right: 5%;
+.brand,
+.address-bar {
+    display: none;
 }
 
-#help {
-	height: 10%;
-	width: 100%;
+.navbar-brand {
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
-#footer {
-	padding-top: 2.5%;
-	height: 12.5%;
-	width: 100%;
+.navbar-nav {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
 }
 
-#pages {
-	height: 70%;
-	width: 100%;
-	background-color: #E8FFE8;
+.img-full {
+    min-width: 100%;
 }
 
-#home {
-	height: 100%;
-	width: 100%;
+.brand-before,
+.brand-name {
+    text-transform: capitalize;
 }
 
-#home div hr {
-	border-color: lightgrey;
-	text-align: center;
-	width: 70%;
+.brand-before {
+    margin: 15px 0;
 }
 
-#content {
-	height: 100%;	
-	width: 100%;
+.brand-name {
+    margin: 0;
+    font-size: 4em;
 }
 
-#topRow {
-	height: 40%;	
-	width: 100%;
+.tagline-divider {
+    margin: 15px auto 3px;
+    max-width: 250px;
+    border-color: #999999;
 }
 
-#middleRow {
-	height: 20%;	
-	width: 100%;
+.box {
+    margin-bottom: 20px;
+    padding: 30px 15px;
+    background: #fff;
+    background: rgba(234,234,234,0.9);
 }
 
-#bottomRow {
-	height: 40%;	
-	width: 100%;
+.intro-text {
+    text-transform: uppercase;
+    font-size: 1.75em;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
 
-#about {
-	height: 100%;
-	width: 100%;
+.img-border {
+    float: none;
+    margin: 0 auto 0;
+    border: #999999 solid 1px;
 }
 
-#resume {
-	height: 100%;
-	width: 100%;
+.img-left {
+    float: none;
+    margin: 0 auto 0;
 }
 
-#projects {
-	height: 100%;
-	width: 100%;
+footer {
+    background: #fff;
+    background: rgba(234,234,234,0.9);
 }
 
-#contact {
-	height: 100%;
-	width: 100%;
+footer p {
+    margin: 0;
+    padding: 50px 0;
 }
 
-#aboutBox {
-	height: 100%;
-	border-style: solid;
-	border-width: 1px;
-	border-color: lightgrey;
+@media screen and (min-width:768px) {
+    .brand {
+        display: inherit;
+        margin: 0;
+        padding: 30px 0 10px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        font-family: Baskerville, Baskerville Old Face, Hoefler Text,Garamond,Times New Roman, serif;
+        font-size: 5em;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+    }
+
+    .top-divider {
+        margin-top: 0;
+    }
+
+    .img-left {
+        float: left;
+        margin-right: 25px;
+    }
+
+    .address-bar {
+        display: inherit;
+        margin: 0;
+        padding: 0 0 40px;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: #fff;
+    }
+
+    .navbar {
+        border-radius: 0;
+    }
+
+    .navbar-header {
+        display: none;
+    }
+
+    .navbar {
+        min-height: 0;
+    }
+
+    .navbar-default {
+        border: none;
+        background: #fff;
+        background: rgba(234,234,234,0.9);
+
+    }
+
+    .nav>li>a {
+        padding: 35px;
+    }
+
+    .navbar-nav>li>a {
+        line-height: normal;
+    }
+
+    .navbar-nav {
+        display: table;
+        float: none;
+        margin: 0 auto;
+        table-layout: fixed;
+        font-size: 1.25em;
+    }
 }
 
-#resumeBox {
-	height: 100%;
-	border-style: solid;
-	border-width: 1px;
-	border-color: lightgrey;
-}
-
-#projectsBox {
-	height: 100%;
-	border-style: solid;
-	border-width: 1px;
-	border-color: lightgrey;
-}
-
-#contactBox {
-	height: 100%;
-	border-style: solid;
-	border-width: 1px;
-	border-color: lightgrey;
-}
-
-#header {
-	height: 20%;
-	width: 100%;
-	padding: 1%;
-}
-
-#body {
-	height: 80%;
-	width: 100%;
-	padding: 1%;
-}
-
-h3 a {
-	font-size: 24px;
-	color: black;
-	text-decoration: underline;
+@media screen and (min-width:1200px) {
+    .box:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
 }
